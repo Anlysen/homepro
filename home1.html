@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="home1.php" method="post">
+        <!-- Не забываем ставить метод post -->
+        <input type="text" name="fio" placeholder="Введите ФИО!"><br>
+        <input type="text" name="age" placeholder="Введите возраст!"><br>
+        <select name="period[]" multiple size="2">
+            <option>Сделайте выбор</option>
+            <option value="high">Высшее</option>
+            <option value="middle">Среднее</option>
+            <option value="school">Школьное</option>
+        </select><br>
+        <input type="radio" name="gender" value="male">Мужской
+        <input type="radio" name="gender" value="female">Женский<br>
+        <select name="language[]" multiple size="2">
+            <option>Знание иностранного языка</option>
+            <option value="english">English</option>
+            <option value="french">Franch</option>
+            <option value="german">German</option>
+            <option value="polish">Polish</option>
+            <option value="arabic">Arabic</option>
+        </select><br>
+        <input type="text" name="captcha" placeholder="Введите текст!"><br>
+        <input type='submit' vаluе='Отправить'>
+    </form>
+</body>
+
+</html>
