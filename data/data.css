@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    justify-content: center;
+    height: 233px;
+    padding-top: 90px;
+}
+
+
+.form {
+    width: 300px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+
+
+.form_top {
+    text-align: center;
+    margin: 0 11px 32px 0;
+    font-weight: normal;
+    font-size: 32px;
+}
+
+
+
+.enter {
+    position: relative;
+    margin: 0 0 10px 40px;
+}
+
+
+
+.str{
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+
+
+.form_but {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin: 12px 0 0 89px;
+}
+
