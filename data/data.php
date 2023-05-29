@@ -36,4 +36,18 @@ echo $_SERVER['HTTP_USER_AGENT'] . "<br>";
 echo $_SERVER['REMOTE_ADDR'] . "<br>"; 
 
 
+
+
+
+$ip = $_SERVER['REMOTE_ADDR'];
+$file = file('./ip.txt');
+
+if (in_array($ip, $file)) {
+    echo 'Вы уже посещали эту страницу!';
+} else {
+    file_put_contents('ip.txt', $ip, FILE_APPEND);
+}
+
+
+
 ?>
