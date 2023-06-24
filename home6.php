@@ -1,26 +1,26 @@
 <?php
 
-class Foo {
-    public function printItem($str) {
-        echo 'Foo: ' . $str . PHP_EOL . "<br>";
-    }
-    public function printPHP() {
-        echo 'PHP is the best lenguage!' . PHP_EOL . "<br>";
-    }
-}
-
-class Bar extends Foo {
-    public function printItem($str) {
-        echo 'Bar: ' . $str . PHP_EOL . "<br>";
-    }
-}
-
-$foo = new Foo();
-$bar = new Bar();
-$foo->printItem('baz');
-$foo->printPHP();
-$bar->printItem('baz');
-$bar->printPHP();
+//class Foo {
+//    public function printItem($str) {
+//        echo 'Foo: ' . $str . PHP_EOL . "<br>";
+//    }
+//    public function printPHP() {
+//        echo 'PHP is the best lenguage!' . PHP_EOL . "<br>";
+//    }
+//}
+//
+//class Bar extends Foo {
+//    public function printItem($str) {
+//        echo 'Bar: ' . $str . PHP_EOL . "<br>";
+//    }
+//}
+//
+//$foo = new Foo();
+//$bar = new Bar();
+//$foo->printItem('baz');
+//$foo->printPHP();
+//$bar->printItem('baz');
+//$bar->printPHP();
 
 /* Resoult:
 Foo: baz
@@ -44,6 +44,10 @@ class Human {
     }
     public function go_sleep() {
         echo 'Go to sleep' . "<br>";
+    }
+    public function __construct()
+    {
+        
     }
 }
 
