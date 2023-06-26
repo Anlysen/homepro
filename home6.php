@@ -42,34 +42,41 @@ class Human {
     public function WakeUp() {
         echo 'Wake up' . "<br>";
     }
-    public function go_sleep() {
+    public function GoSleep() {
         echo 'Go to sleep' . "<br>";
     }
-    public function __construct()
-    {
-        
-    }
+    // public function __construct()
+    // {
+    //     $now_time = date('Y-m-d');
+    // }
 }
 
 class Supllement extends Human {
-    public function clean_teeth() {
+    public function CleanTeeth() {
         echo 'Clean the teeth' . "<br>";
     }
-    public function go_work() {
+    public function GoWork() {
         echo 'Go to work' . "<br>";
     }
-    public function lanch() {
+    public function Lanch() {
         echo 'Have lanch' . "<br>";
     }
-    public function get_home() {
+    public function GetHome() {
         echo 'Get home' . "<br>";
     }
-    public function dinner() {
+    public function Dinner() {
         echo 'Have dinner' . "<br>";
     }
-    public function go_sleep() {
+    public function GoSleep() {
         echo 'Clean the teeth' . "<br>";
     }
 }
+$object = new Human();
+$now_time = new Human();
+print_r($now_time->format('Y/m/d s:i:H'));
+echo "<pre>";
+print_r($object);
+echo "</pre>";
+
 
 ?>
