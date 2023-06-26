@@ -38,6 +38,7 @@ class Human {
     public $gender = 'Man';
     public $age = 30;
     public $hobbies = 'sport';
+    public $new_date;
 
     public function WakeUp() {
         echo 'Wake up' . "<br>";
@@ -45,10 +46,10 @@ class Human {
     public function GoSleep() {
         echo 'Go to sleep' . "<br>";
     }
-    // public function __construct()
-    // {
-    //     $now_time = date('Y-m-d');
-    // }
+    public function __construct()
+    {
+        $this->new_date = new DateTime();
+    }
 }
 
 class Supllement extends Human {
@@ -70,13 +71,25 @@ class Supllement extends Human {
     public function GoSleep() {
         echo 'Clean the teeth' . "<br>";
     }
+    public function make() {
+        if ($this->new_date > '07:00:00') {
+            return $this->CleanTeeth();
+        } elseif ($this->new_date > '08:00:00') {
+            return $this->GoWork();
+        } elseif ($this->new_date > '12:00:00') {
+            return $this->Lanch();
+        } elseif ($this->new_date > '18:00:00') {
+            return $this->GetHome();
+        } elseif ($this->new_date > '19:00:00') {
+            return $this->Dinner();
+        } elseif ($this->new_date > '22:30:00') {
+            return $this->GoWork();
+        }
+    }
 }
-$object = new Human();
-$now_time = new Human();
-print_r($now_time->format('Y/m/d s:i:H'));
-echo "<pre>";
-print_r($object);
-echo "</pre>";
+$supllement = new Supllement();
+echo $supllement->make();
+
 
 
 ?>
