@@ -15,7 +15,7 @@ class Human {
     }
     public function __construct()
     {
-        $this->new_date = new DateTime('02:00:00');
+        $this->new_date = new DateTime();
     }
 }
 
@@ -42,17 +42,18 @@ class Supllement extends Human {
 
 
     public function make() {
-        if ($this->new_date >= '07:00:00' && $this->new_date <= '08:00:00') {
+        $time1 = new DateTime('07:00:00');
+        if ($this->new_date >= $time1 && $this->new_date <= new DateTime('08:00:00')) {
             return $this->CleanTeeth();
-        } elseif ($this->new_date > '08:00:00' && $this->new_date <= '12:00:00') {
+        } elseif ($this->new_date > new DateTime('08:00:00') && $this->new_date <= new DateTime('12:00:00')) {
             return $this->GoWork();
-        } elseif ($this->new_date > '12:00:00' && $this->new_date <= '18:00:00') {
+        } elseif ($this->new_date > new DateTime('12:00:00') && $this->new_date <= new DateTime('18:00:00')) {
             return $this->Lanch();
-        } elseif ($this->new_date > '18:00:00' && $this->new_date <= '19:00:00') {
+        } elseif ($this->new_date > new DateTime('18:00:00') && $this->new_date <= new DateTime('19:00:00')) {
             return $this->GetHome();
-        } elseif ($this->new_date > '19:00:00' && $this->new_date <= '22:30:00') {
+        } elseif ($this->new_date > new DateTime('19:00:00') && $this->new_date <= new DateTime('22:00:00')) {
             return $this->Dinner();
-        } elseif ($this->new_date > '22:30:00' && $this->new_date <= '0:00:00') {
+        } elseif ($this->new_date > new DateTime('22:00:00') && $this->new_date <= new DateTime('23:59:59')) {
             return $this->GoWork();
         }
     }
@@ -61,9 +62,7 @@ class Supllement extends Human {
 
 $supllement = new Supllement();
 echo $supllement->make();
-echo "<pre>";
-print_r($supllement);
-echo "</pre>";
+
 
 
 
