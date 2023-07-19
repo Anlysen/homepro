@@ -13,10 +13,10 @@ class Human {
     public function GoSleep() {
         echo 'Go to sleep' . "<br>";
     }
-    public function __construct()
+    public function __construct() // В этом месте пишем переменную, в которую в конце запишим нужное время
     {
-        $this->new_date = new DateTime();
-    }
+        $this->new_date = new DateTime(); // В этом месте пишем переменную, в которую в конце запишим нужное время
+    } // Если ничего не поставить в скобках, время выставится по факту
 }
 
 
